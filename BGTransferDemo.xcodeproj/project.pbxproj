@@ -14,6 +14,7 @@
 		6E4E23011AB9E90300734661 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E4E23001AB9E90300734661 /* Images.xcassets */; };
 		6E4E23041AB9E90300734661 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E4E23021AB9E90300734661 /* LaunchScreen.xib */; };
 		6E4E23101AB9E90300734661 /* BGTransferDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E230F1AB9E90300734661 /* BGTransferDemoTests.m */; };
+		6E4E231D1ABA2D7F00734661 /* FileDownloadInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E231C1ABA2D7F00734661 /* FileDownloadInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		6E4E23091AB9E90300734661 /* BGTransferDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BGTransferDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E4E230E1AB9E90300734661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E4E230F1AB9E90300734661 /* BGTransferDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGTransferDemoTests.m; sourceTree = "<group>"; };
+		6E4E231B1ABA2D7F00734661 /* FileDownloadInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDownloadInfo.h; sourceTree = "<group>"; };
+		6E4E231C1ABA2D7F00734661 /* FileDownloadInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDownloadInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				6E4E22F81AB9E90300734661 /* AppDelegate.m */,
 				6E4E22FA1AB9E90300734661 /* ViewController.h */,
 				6E4E22FB1AB9E90300734661 /* ViewController.m */,
+				6E4E231B1ABA2D7F00734661 /* FileDownloadInfo.h */,
+				6E4E231C1ABA2D7F00734661 /* FileDownloadInfo.m */,
 				6E4E22FD1AB9E90300734661 /* Main.storyboard */,
 				6E4E23001AB9E90300734661 /* Images.xcassets */,
 				6E4E23021AB9E90300734661 /* LaunchScreen.xib */,
@@ -168,6 +173,11 @@
 				TargetAttributes = {
 					6E4E22EF1AB9E90300734661 = {
 						CreatedOnToolsVersion = 6.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					6E4E23081AB9E90300734661 = {
 						CreatedOnToolsVersion = 6.2;
@@ -220,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E4E22FC1AB9E90300734661 /* ViewController.m in Sources */,
+				6E4E231D1ABA2D7F00734661 /* FileDownloadInfo.m in Sources */,
 				6E4E22F91AB9E90300734661 /* AppDelegate.m in Sources */,
 				6E4E22F61AB9E90300734661 /* main.m in Sources */,
 			);
