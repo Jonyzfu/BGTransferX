@@ -67,6 +67,10 @@
                                                 <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhU-bE-Nn0">
                                                     <rect key="frame" x="560" y="18" width="25" height="25"/>
                                                     <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="GpO-pJ-8b5"/>
+                                                        <constraint firstAttribute="width" constant="25" id="LKx-86-gyj"/>
+                                                    </constraints>
                                                     <state key="normal" image="Stop">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -93,6 +97,10 @@
                                                 <button opaque="NO" tag="20" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WD-oX-o2r">
                                                     <rect key="frame" x="521" y="17" width="25" height="25"/>
                                                     <color key="backgroundColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="8Re-96-TSf"/>
+                                                        <constraint firstAttribute="width" constant="25" id="bZA-aX-Mt9"/>
+                                                    </constraints>
                                                     <state key="normal" image="Play">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>

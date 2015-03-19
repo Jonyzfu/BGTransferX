@@ -91,7 +91,7 @@
         stopButton.hidden = hideControls;
         readyLabel.hidden = !hideControls;
         
-        startPauseButtonImageName = @"play";
+        startPauseButtonImageName = @"Play";
     } else {
         // Show the progress view and update its progress, change the image of the start button so it shows
         // a pause icon, and enable the stop button.
@@ -100,7 +100,7 @@
         
         stopButton.enabled = YES;
         
-        startPauseButtonImageName = @"pause";
+        startPauseButtonImageName = @"Pause";
     }
     
     // Set the appropriate image to the start button.
@@ -109,6 +109,7 @@
     return cell;
     
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -122,6 +123,12 @@
     self.tblFiles.dataSource = self;
     
     self.tblFiles.scrollEnabled = NO;
+    
+    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"com.jonyzfu.ios.BGTransferX"];
+    
+    self.session = [NSURLSession sessionWithConfiguration:sessionConfiguration
+                                                 delegate:self
+                                            delegateQueue:nil];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -130,7 +137,49 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)startOrPauseDownloadingSingleFile:(id)sender {
+- (IBAction)startOrPauseDownloadingSingleFile:(id)sender
+{
+    // Check if the parent view of the sender button is a table view cell.
+    if ([[[[sender superview] superview] superview] isKindOfClass:[UITableViewCell class]]) {
+        // Get the container cell.
+        UITableViewCell *containerCell = (UITableViewCell *)[[[sender superview] superview] superview];
+        
+        // Get the row (index) of the cell. We'll keep the index path as well.
+        NSIndexPath *cellIndexPath = [self.tblFiles indexPathForCell:containerCell];
+        long cellIndex = cellIndexPath.row;
+        
+        // Get the FileDownloadInfo object being at the cellIndex position of the array.
+        FileDownloadInfo *fdi = [self.arrFileDownloadData objectAtIndex:cellIndex];
+        
+        // The isDownloading property of the fdi object defines whether a downloading should be started
+        // or be stopped.
+        if (!fdi.isDownloading) {
+            // This is the case where a download task should be started.
+            
+            // Create a new task, but check whether it should be created using a URL or resume data.
+            if (fdi.taskIdentifier == -1) {
+                // If the taskIdentifier property of the fdi object has value -1, then create a new task
+                // providing the appropriate URL as the download source.
+                fdi.downloadTask = [self.session downloadTaskWithURL:[NSURL URLWithString:fdi.downloadSource]];
+                
+                // Keep the new task identifier.
+                fdi.taskIdentifier = fdi.downloadTask.taskIdentifier;
+                
+                // Start the task.
+                [fdi.downloadTask resume];
+            } else {
+                // The resume of a download task will be done here.
+            }
+        } else {
+            //  The pause of a download task will be done here.
+        }
+        
+        // Change the isDownloading property value.
+        fdi.isDownloading = !fdi.isDownloading;
+        
+        // Reload the table view.
+        [self.tblFiles reloadRowsAtIndexPaths:@[cellIndexPath] withRowAnimation:UITableViewRowAnimationNone];
+    }
 }
 
 - (IBAction)stopDownloading:(id)sender {

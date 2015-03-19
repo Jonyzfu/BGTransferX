@@ -12,7 +12,6 @@
 		6E4E22FC1AB9E90300734661 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E22FB1AB9E90300734661 /* ViewController.m */; };
 		6E4E22FF1AB9E90300734661 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4E22FD1AB9E90300734661 /* Main.storyboard */; };
 		6E4E23011AB9E90300734661 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E4E23001AB9E90300734661 /* Images.xcassets */; };
-		6E4E23041AB9E90300734661 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E4E23021AB9E90300734661 /* LaunchScreen.xib */; };
 		6E4E23101AB9E90300734661 /* BGTransferDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E230F1AB9E90300734661 /* BGTransferDemoTests.m */; };
 		6E4E231D1ABA2D7F00734661 /* FileDownloadInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E231C1ABA2D7F00734661 /* FileDownloadInfo.m */; };
 /* End PBXBuildFile section */
@@ -37,7 +36,6 @@
 		6E4E22FB1AB9E90300734661 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6E4E22FE1AB9E90300734661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E4E23001AB9E90300734661 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6E4E23031AB9E90300734661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6E4E23091AB9E90300734661 /* BGTransferDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BGTransferDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E4E230E1AB9E90300734661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E4E230F1AB9E90300734661 /* BGTransferDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGTransferDemoTests.m; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 				6E4E231C1ABA2D7F00734661 /* FileDownloadInfo.m */,
 				6E4E22FD1AB9E90300734661 /* Main.storyboard */,
 				6E4E23001AB9E90300734661 /* Images.xcassets */,
-				6E4E23021AB9E90300734661 /* LaunchScreen.xib */,
 				6E4E22F31AB9E90300734661 /* Supporting Files */,
 			);
 			path = BGTransferDemo;
@@ -210,7 +207,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E4E22FF1AB9E90300734661 /* Main.storyboard in Resources */,
-				6E4E23041AB9E90300734661 /* LaunchScreen.xib in Resources */,
 				6E4E23011AB9E90300734661 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,14 +257,6 @@
 				6E4E22FE1AB9E90300734661 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6E4E23021AB9E90300734661 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6E4E23031AB9E90300734661 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
